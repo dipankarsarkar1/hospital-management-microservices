@@ -2,38 +2,28 @@ Hospital Management System (HMS)
 Microservices-Based Architecture using Spring Boot
 📖 Overview
 
-The Hospital Management System (HMS) is an enterprise-grade backend application developed using Spring Boot Microservices Architecture.
-It is designed to manage hospital operations such as patient records, doctor management, appointments, billing, and authentication with scalability, security, and maintainability in mind.
+The Hospital Management System (HMS) is a backend application built using Spring Boot Microservices Architecture.
+It manages hospital operations such as patients, doctors, appointments, billing, and authentication in a scalable and secure manner.
 
-This project follows real-world microservices best practices including service discovery, centralized configuration, API gateway, and secure communication.
-
-🏗️ System Architecture
-
-The system is decomposed into independent microservices, each responsible for a single business capability.
-
-HMS-With-MicroService
+🏗️ Project Structure
+HMS-With-MicroService/
 │
-├── config-server
-├── service-registry (Eureka)
-├── api-gateway
-├── auth-service
-├── patient-service
-├── doctor-service
-├── appointment-service
-├── billing-service
-└── common-library
+├── config-server/
+├── service-registry/        # Eureka Server
+├── api-gateway/
+├── auth-service/
+├── patient-service/
+├── doctor-service/
+├── appointment-service/
+├── billing-service/
+└── common-library/
 
-Architectural Highlights
 
-Loose coupling between services
+✅ Use triple backticks
+✅ Add text after backticks
+✅ End each folder with /
 
-Independent deployment and scaling
-
-Database per microservice
-
-Centralized configuration
-
-Secure API access via Gateway
+This guarantees correct rendering on GitHub.
 
 🧰 Technology Stack
 Category	Technology
@@ -41,48 +31,33 @@ Language	Java 17
 Framework	Spring Boot
 Architecture	Microservices
 Security	Spring Security, JWT
-API Gateway	Spring Cloud Gateway
 Service Discovery	Netflix Eureka
-Configuration	Spring Cloud Config
+API Gateway	Spring Cloud Gateway
+Config Server	Spring Cloud Config
 Database	MySQL
 Build Tool	Maven
-Documentation	Swagger / OpenAPI
-Version Control	Git
-🔐 Security Design
+Documentation	Swagger
+🔐 Security
 
 JWT-based authentication
 
-Role-based authorization:
+Role-based authorization (ADMIN, DOCTOR, PATIENT)
 
-ADMIN
-
-DOCTOR
-
-PATIENT
-
-Secured endpoints via Spring Security filters
-
-Token validation handled at API Gateway level
+Secure API access via Gateway
 
 ⚙️ Configuration Management
 
 Centralized configuration using Spring Cloud Config Server
 
-Environment-specific profiles:
+Profiles: dev, test, prod
 
-dev
+🔒 application.properties is ignored
+📄 Use application.properties.example
 
-test
-
-prod
-
-⚠️ Sensitive configuration files such as application.properties are excluded from version control.
-Use application.properties.example as a reference template.
-
-🚀 Application Startup Guide
+🚀 How to Run
 Prerequisites
 
-Java 17 or higher
+Java 17+
 
 Maven
 
@@ -90,85 +65,53 @@ MySQL
 
 Git
 
-Clone Repository
-git clone https://github.com/your-username/HMS-With-MicroService.git
-cd HMS-With-MicroService
-
-Startup Order (Important)
+Start Order
 
 Config Server
 
-Service Registry (Eureka)
+Eureka Server
 
 API Gateway
 
-Business Microservices
+Business Services
 
 mvn spring-boot:run
 
 🧪 API Documentation
-
-Each microservice exposes Swagger documentation:
-
-http://localhost:{service-port}/swagger-ui.html
+http://localhost:{port}/swagger-ui.html
 
 🗄️ Database Strategy
 
-Each microservice owns its database
+Database per microservice
 
-No shared schema across services
+No shared schemas
 
-Ensures:
-
-High scalability
-
-Fault isolation
-
-Independent evolution
+Independent scaling
 
 ⚠️ Exception Handling
 
 Global exception handling using @ControllerAdvice
 
-Custom business exceptions:
-
-PATIENT_ALREADY_EXISTS
+Custom error codes:
 
 PATIENT_NOT_FOUND
 
 DOCTOR_ALREADY_EXISTS
 
-APPOINTMENT_CONFLICT
-
-📁 Git Ignore Policy
-
-The following are excluded from version control:
+📁 Git Ignore Rules
 
 application.properties
 
-Build artifacts (target/)
+target/
 
-IDE-specific files (.idea, .classpath, .project)
-
-🔮 Future Enhancements
-
-Docker & Kubernetes deployment
-
-Event-driven communication using Kafka
-
-Centralized logging (ELK Stack)
-
-CI/CD pipeline integration
-
-Payment gateway integration
+IDE config files
 
 👤 Author
 
 Dipankar Sarkar
 Senior Java Developer
-Spring Boot • Microservices • REST APIs • Security
+Spring Boot | Microservices | REST APIs
 
 📄 License
 
-This project is intended for learning, demonstration, and internal use.
-You may modify and extend it as needed.
+For educational and demonstration purposes.
