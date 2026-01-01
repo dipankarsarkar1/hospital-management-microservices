@@ -15,7 +15,7 @@ Follows a modular approach where each service is independent.
 HMS-With-MicroService/
 │
 ├── config-server/
-├── service-registry/        # Eureka Server
+├── service-registry/       
 ├── api-gateway/
 ├── auth-service/
 ├── patient-service/
@@ -33,7 +33,7 @@ This guarantees correct rendering on GitHub.
 
 🧰 Technology Stack
 Category	Technology
-Language	Java 17
+Language	Java 21
 Framework	Spring Boot
 Architecture	Microservices
 Security	Spring Security, JWT
