@@ -1,11 +1,17 @@
-Hospital Management System (HMS)
-Microservices-Based Architecture using Spring Boot
-📖 Overview
+# Hospital Management System (HMS)
+### Microservices-Based Architecture using Spring Boot
 
-The Hospital Management System (HMS) is a backend application built using Spring Boot Microservices Architecture.
-It manages hospital operations such as patients, doctors, appointments, billing, and authentication in a scalable and secure manner.
+## 📖 Overview
+The **Hospital Management System (HMS)** is a robust backend application built using a **Spring Boot Microservices Architecture**. It is designed to manage complex hospital operations—including patients, doctors, appointments, billing, and authentication—in a scalable, secure, and decoupled manner.
 
-🏗️ Project Structure
+
+
+---
+
+## 🏗️ Project Structure
+Follows a modular approach where each service is independent.
+
+```text
 HMS-With-MicroService/
 │
 ├── config-server/
