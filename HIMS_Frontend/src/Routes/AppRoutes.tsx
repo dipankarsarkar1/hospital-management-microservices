@@ -8,6 +8,8 @@ import PublicRoutes from './PublicRoutes';
 import ProtectedRoutes from './ProtectedRoutes';
 import PatientDashboard from '../layout/PatientDashboard';
 import PatientProfilePage from '../Pages/Patient/PatientProfilePage';
+import DoctorProfilePage from '../Pages/Doctor/DoctorProfilePage';
+import DoctorDashboard from '../layout/DoctorDashboard';
 
 const AppRoutes = () => {
   return (
@@ -21,6 +23,12 @@ const AppRoutes = () => {
           <Route path="/patients" element={<Random />} />
           <Route path="/phermacy" element={<Random />} />
           {/* <Route path="/appointments" element={<Random />} /> */}
+        </Route>
+        <Route path="/doctor" element={<ProtectedRoutes><DoctorDashboard /></ProtectedRoutes>}>
+          <Route path="dashboard" element={<Random />} />
+          <Route path="profile" element={<DoctorProfilePage />} />
+          <Route path="appointments" element={<Random />} />
+          <Route path="phermacy" element={<Random />} />
         </Route>
 
         <Route path="/patient" element={<ProtectedRoutes><PatientDashboard /></ProtectedRoutes>}>

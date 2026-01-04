@@ -1,0 +1,3 @@
+export const bloodGroups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
+export const doctorSpecializations = ["General Physician", "Cardiologist", "Dermatologist", "Neurologist", "Orthopedic", "Pediatrician", "Gynecologist", "Psychiatrist", "Oncologist", "ENT Specialist", "Ophthalmologist", "Urologist", "Nephrologist", "Gastroenterologist", "Pulmonologist", "Endocrinologist", "Radiologist", "Anesthesiologist", "Rheumatologist", "Hematologist"];
+export const departments = ["General Medicine", "Cardiology", "Neurology", "Orthopedics", "Pediatrics", "Gynecology", "Dermatology", "ENT", "Ophthalmology", "Psychiatry", "Oncology", "Urology", "Nephrology", "Gastroenterology", "Pulmonology", "Endocrinology", "Radiology", "Anesthesiology", "Emergency", "Pathology"];

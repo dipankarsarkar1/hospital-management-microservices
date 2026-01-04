@@ -9,7 +9,7 @@ const links = [
     url: '/patient/dashboard',
     icons: <IconLayoutGrid stroke={1.5} />
   },
-   {
+  {
     label: 'Profile',
     url: '/patient/profile',
     icons: <IconUser stroke={1.5} />

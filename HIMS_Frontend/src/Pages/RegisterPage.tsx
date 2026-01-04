@@ -70,7 +70,7 @@ const RegisterPage = () => {
                         color='pink'
                         bg='none'
                         className='[&_*]:!text-white border border-white '
-                        {...form.getInputProps('type')}
+                        {...form.getInputProps('role')}
                         data={[{ label: 'patient', value: "PATIENT" }, { label: 'doctor', value: "DOCTOR" }, { label: 'admin', value: "ADMIN" },]} />;
                     <TextInput
                         className='transition duration-30'

@@ -3,7 +3,7 @@ import { IconCamera, IconEdit } from '@tabler/icons-react';
 import { useRef, useState } from 'react';
 import { useSelector } from 'react-redux'
 import { DateInput } from '@mantine/dates';
-import { bloodGroups } from '../../../Data/DropDownData';
+import { bloodGroups, departments, doctorSpecializations } from '../../../Data/DropDownData';
 
 
 const Profile = () => {
@@ -24,10 +24,10 @@ const Profile = () => {
         dob: "1996-08-14",
         phone: "9876543210",
         address: "Flat 302, Green Valley Apartments, MG Road, Bengaluru, Karnataka - 560001",
-        aadharNo: "1234 5678 9012",
-        bloodGroup: "O+",
-        allergies: "Dust, Pollen",
-        chronicDisease: "Hypertension"
+        licenseNo: "1234 5678 9012",
+        specialization: "Cardiology",
+        department: "Cardiology",
+        totalExp: "8 years"
     };
 
     return (
@@ -123,21 +123,12 @@ const Profile = () => {
 
                             <Table.Tr>
                                 <Table.Td>
-                                    <Text fw={600} size="lg">Aadhaar No</Text>
+                                    <Text fw={600} size="lg">License No</Text>
                                 </Table.Td>
                                 <Table.Td>
-                                    {!edit ? <Text size="lg">{userInfos.aadharNo}</Text> : <NumberInput maxLength={12} clampBehavior='strict' hideControls placeholder="Enter updated Aadhaar Number" />}
+                                    {!edit ? <Text size="lg">{userInfos.licenseNo}</Text> : <NumberInput maxLength={12} clampBehavior='strict' hideControls placeholder="Enter updated License Number" />}
                                 </Table.Td>
 
-                            </Table.Tr>
-
-                            <Table.Tr>
-                                <Table.Td>
-                                    <Text fw={600} size="lg">Blood Group</Text>
-                                </Table.Td>
-                                <Table.Td>
-                                    {!edit ? <Text size="lg">{userInfos.bloodGroup}</Text> : <Select data={bloodGroups} placeholder="Enter updated Blood Group" />}
-                                </Table.Td>
                             </Table.Tr>
 
                             <Table.Tr>
@@ -151,19 +142,27 @@ const Profile = () => {
 
                             <Table.Tr>
                                 <Table.Td>
-                                    <Text fw={600} size="lg">Allergies</Text>
+                                    <Text fw={600} size="lg">Specialization</Text>
                                 </Table.Td>
                                 <Table.Td>
-                                    {!edit ? <Text size="lg">{userInfos.allergies || '-'}</Text> : <TagsInput placeholder="Enter updated Allergies and separeted by coma" />}
+                                    {!edit ? <Text size="lg">{userInfos.specialization || '-'}</Text> : <Select data={doctorSpecializations} placeholder="Enter updated Specialization and separeted by coma" />}
                                 </Table.Td>
                             </Table.Tr>
 
                             <Table.Tr>
                                 <Table.Td>
-                                    <Text fw={600} size="lg">Chronic Disease</Text>
+                                    <Text fw={600} size="lg">Depertment</Text>
                                 </Table.Td>
                                 <Table.Td>
-                                    {!edit ? <Text size="lg">{userInfos.chronicDisease || '-'}</Text> : <TagsInput placeholder="Enter updated Chronic Disease separeted by coma" />}
+                                    {!edit ? <Text size="lg">{userInfos.department || '-'}</Text> : <Select data={departments} placeholder="Enter updated Department" />}
+                                </Table.Td>
+                            </Table.Tr>
+                            <Table.Tr>
+                                <Table.Td>
+                                    <Text fw={600} size="lg">Total Experince</Text>
+                                </Table.Td>
+                                <Table.Td>
+                                    {!edit ? <Text size="lg">{userInfos.totalExp || '-'}</Text> : <TagsInput placeholder="Enter updated Total Experience separeted by coma" />}
                                 </Table.Td>
                             </Table.Tr>
 
